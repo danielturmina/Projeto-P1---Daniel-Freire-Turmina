@@ -6,7 +6,7 @@ IF968 - Programação 1
 
 Autor: Daniel Freire Turmina (dft)
 Email: dft@cin.ufpe.br
-Data: 2019-10-15
+Data: 2019-11-15
 
 Copyright(c) 2019 Daniel Freire Turmina
 """
