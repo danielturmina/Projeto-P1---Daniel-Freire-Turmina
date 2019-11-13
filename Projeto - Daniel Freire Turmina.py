@@ -352,7 +352,7 @@ def dicionario(listaGeral):
             dic[chave] = tupla
     return dic 
         
-def cadastroTreinamento():
+def cadastroTreinamento(dic):
     """Função para cadastrar novos treinamentos (Permite Cadastro Manual ou Importar de uma Planilha que segue um Modelo Padrão)."""
     continuar2 = True
     continuar3 = True
@@ -446,6 +446,7 @@ def cadastroTreinamento():
                         listaLOG.append(listaLog7)
                         log(listaLOG)
                         continuar10 = False
+                        return dic2
 
 def altera(listaGeral):
     """Função para alterar treinamentos já cadastrados (Permite alterar: matrícula, nome do curso, data de início, data de término e carga horária)."""
@@ -773,7 +774,7 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
            print("\nOpção Inválida!\n")        
         elif menu == "1":
             if acesso == "analista" or acesso == "admin":
-                cadastroTreinamento()
+                dic = cadastroTreinamento(dic)
             elif acesso == "estagiario":
                 print("\nVocê não possui acesso para realizar cadastros!!\n")
         elif menu == "2":
@@ -805,4 +806,7 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
                 print("\nVocê não possui acesso para cadastrar, alterar ou remover usuários!!\n")     
         elif menu == "8":
             print("\nPrograma Finalizado!!\n")
+            print(dic)
+            print("**************************************************************")
+            print(listaGeral)
             continuar = False
