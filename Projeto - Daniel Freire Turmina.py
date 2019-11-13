@@ -174,7 +174,7 @@ def salvarLogins(dicLogins):
 
 def importaLog():
     """Função para  importar todos os registros de log existentes (Retorna uma lista de Logs)."""
-    arq = open("LOG.csv","r")
+    arq = open("log.csv","r")
     listaInicial = arq.readlines()
     listaLOG = []
     listaAux = []
@@ -194,7 +194,7 @@ def importaLog():
 
 def log(listaLOG):
     """Função para registrar todas as operações do sistema (Cria o arquivo "LOG.csv" com as seguintes informações: quem executou, quando executou e o que executou)."""
-    arq = open("LOG.csv","w")
+    arq = open("log.csv","w")
     arq.write("Usuário;")
     arq.write("Data e Hora;")
     arq.write("Execução;")
@@ -403,6 +403,7 @@ def cadastroTreinamento(dic):
                 listaGeral.append(lista)
                 cripto(dic)
                 print("\nCadastro Realizado com Sucesso!!\n")
+                return dic
         elif cadastro == "2":
                 print("\nInsira a planilha de importação (importartreinamento.csv) na mesma pasta do programa!\n")
                 print("Caso o treinamento já esteja cadastrado, o sistema irá atualizar com as novas informações!!\n")
@@ -806,7 +807,4 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
                 print("\nVocê não possui acesso para cadastrar, alterar ou remover usuários!!\n")     
         elif menu == "8":
             print("\nPrograma Finalizado!!\n")
-            print(dic)
-            print("**************************************************************")
-            print(listaGeral)
             continuar = False
