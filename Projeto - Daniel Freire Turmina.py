@@ -328,7 +328,7 @@ def abertura(listaInicial):
     tamanho = len(listaInicial)
     n = 0
     listaGeral = []
-    if tamanho > 8:
+    if tamanho >= 8:
         while n < tamanho:
             lista = [listaInicial[n],listaInicial[n+1],listaInicial[n+2],listaInicial[n+3],listaInicial[n+4],listaInicial[n+5],listaInicial[n+6],listaInicial[n+7]]
             n += 8
