@@ -735,6 +735,9 @@ def relatorio(listaGeral):
             arq.write("\n")
     arq.close()
     print("\nRelatório Gerado com Sucesso! Arquivo RelatoriosElementos.csv foi Salvo!\n")
+    listaLog22 = [login,dataTexto,"Gerou um relatório com todos os elementos."]
+    listaLOG.append(listaLog22)
+    log(listaLOG)
 
 dataAtual = datetime.now()
 dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
