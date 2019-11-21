@@ -37,11 +37,11 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
                 print("\nVocê não possui acesso para realizar cadastros!!\n")
         elif menu == "2":
             if acesso == "analista" or acesso == "admin":
-                altera(listaGeral)
+                altera(listaGeral,dic)
             elif acesso == "estagiario":
                 print("\nVocê não possui acesso para realizar alterações!!\n")
         elif menu == "3":
-            buscar(listaGeral)
+            buscar(listaGeral,dic)
         elif menu == "4":
             if acesso == "analista" or acesso == "admin":
                 relatorio(listaGeral)
@@ -49,7 +49,7 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
                 print("\nVocê não possui acesso para gerar relatórios!!\n")
         elif menu == "5":
             if acesso == "analista" or acesso == "admin":
-                elimina(listaGeral)
+                elimina(listaGeral,dic)
             elif acesso == "estagiario":
                 print("\nVocê não possui acesso para remover treinamentos!!\n")
         elif menu == "6":
