@@ -32,6 +32,7 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
            print("\nOpção Inválida!\n")        
         elif menu == "1":
             if acesso == "analista" or acesso == "admin":
+                dic = dicionario(listaGeral)
                 listaGeral = cadastroTreinamento(dic)
             elif acesso == "estagiario":
                 print("\nVocê não possui acesso para realizar cadastros!!\n")
