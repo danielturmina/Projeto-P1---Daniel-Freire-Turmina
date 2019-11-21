@@ -346,6 +346,7 @@ def cadastroTreinamento(dic):
         if cadastro != "1" and cadastro != "2" and cadastro != "3":
             print("\nOpção Inválida\n")
         elif cadastro == "3":
+            return listaGeral
             continuar2 = False
         elif cadastro == "1":
             matricula = input("Digite a Matrícula do Empregado: ")
