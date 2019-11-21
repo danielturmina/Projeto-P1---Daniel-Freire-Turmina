@@ -198,6 +198,8 @@ def log(listaLOG):
     
 def cadastroUsuario(login):
     """Função para realizar alterações cadastrais (Permite criar novo usuário, alterar senha ou nível de acesso e remover usuários cadastrados)."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     continuar = True
     while continuar:
         desejo = input("\nO que você deseja fazer?\nDigite 1 - Cadastrar novo usuário\nDigite 2 - Remover usuário cadastrado\nDigite 3 - Alterar Senha de usuário cadastrado\nDigite 4 - Alterar nível de acesso de usuário cadastrado\nDigite 5 - Retornar ao Menu Principal\n")
@@ -339,6 +341,8 @@ def dicionario(listaGeral):
         
 def cadastroTreinamento(dic):
     """Função para cadastrar novos treinamentos (Permite Cadastro Manual ou Importar de uma Planilha que segue um Modelo Padrão)."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     continuar2 = True
     continuar3 = True
     while continuar2:
@@ -437,6 +441,8 @@ def cadastroTreinamento(dic):
 
 def altera(listaGeral,dic):
     """Função para alterar treinamentos já cadastrados (Permite alterar: matrícula, nome do curso, data de início, data de término e carga horária)."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     continuar7 =  True
     while continuar7:
         matricula = input("Digite a Matrícula do Empregado Cadastrado: ")
@@ -553,6 +559,8 @@ def altera(listaGeral,dic):
 
 def buscar(listaGeral,dic):
     """Função para realizar buscas no programa."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     continuar9 = True
     while continuar9:
         busca = input("\nO que você deseja buscar?\nDigite 1 - Para os Imprimir todos os Treinamentos de um Empregado\nDigite 2 - Para os Imprimir todos os Empregados que Realizaram um Determinado Curso\n")
@@ -593,6 +601,8 @@ def buscar(listaGeral,dic):
                        
 def elimina(listaGeral,dic):
     """Função para excluir treinamentos já cadastrados."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     continuar5 = True
     while continuar5:
         eliminaMat= input("Digite a Matrícula Empregado: ")
@@ -627,6 +637,8 @@ def elimina(listaGeral,dic):
                 
 def ordenar(listaGeral):
     """Função para ordernar todos os treinamentos realizados (Salva o arquivo "elementos.csv" de forma ordenada com base na matrícula)."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     continuar = True
     while continuar:
         desejo = input("\nComo você deseja ordernar?\nDigite 1 - Ordenar Planilha de Treinamento por Número da Matrícula\nDigite 2 - Retornar ao Menu Principal\n")
@@ -645,7 +657,7 @@ def ordenar(listaGeral):
             listaGeral = novaLista
             relatorioOrdenado(listaGeral)
             print("\nArquivo Ordenado com Sucesso! Arquivo RelatoriosOrdenado.csv foi Salvo!\n")
-            listaLog21 = [login,dataTexto,"Ordenou o arquivo Elementos."]
+            listaLog21 = [login,dataTexto,"Gerou relatório ordenado."]
             listaLOG.append(listaLog21)
             log(listaLOG)
             return listaGeral
@@ -697,6 +709,8 @@ def relatorioOrdenado(listaGeral):
    
 def relatorio(listaGeral):
     """Função para gerar um relatório como todos os treinamentos cadastrados(Salva no arquivo "RelatoriosElementos.csv")."""
+    dataAtual = datetime.now()
+    dataTexto = dataAtual.strftime("%d/%m/%Y %H:%M")
     arq = open("RelatorioElementos.csv","w")
     arq.write("Chave;")
     arq.write("Matrícula;")
