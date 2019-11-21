@@ -49,6 +49,7 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
                 print("\nVocê não possui acesso para gerar relatórios!!\n")
         elif menu == "5":
             if acesso == "analista" or acesso == "admin":
+                dic = dicionario(listaGeral)
                 elimina(listaGeral,dic)
             elif acesso == "estagiario":
                 print("\nVocê não possui acesso para remover treinamentos!!\n")
