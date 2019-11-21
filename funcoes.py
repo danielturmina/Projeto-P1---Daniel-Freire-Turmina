@@ -388,7 +388,7 @@ def cadastroTreinamento(dic):
                 listaGeral.append(lista)
                 cripto(dic)
                 print("\nCadastro Realizado com Sucesso!!\n")
-                return dic
+                return listaGeral
         elif cadastro == "2":
                 print("\nInsira a planilha de importação (importartreinamento.csv) na mesma pasta do programa!\n")
                 print("Caso o treinamento já esteja cadastrado, o sistema irá atualizar com as novas informações!!\n")
@@ -426,13 +426,13 @@ def cadastroTreinamento(dic):
                                     lista1=[chave,a[0],a[1],a[2],a[3],a[4],cadastro,modificacao]
                                     listaGeral.append(lista1)
                         print("\nImportação Concluída com Sucesso!!\n")
-                        dic2 = dicionario(listaGeral)
-                        cripto(dic2)
+                        dic = dicionario(listaGeral)
+                        cripto(dic)
                         listaLog7 = [login,dataTexto,"Importou uma Planilha de Treinamento."]
                         listaLOG.append(listaLog7)
                         log(listaLOG)
                         continuar10 = False
-                        return dic2
+                        return listaGeral
 
 def altera(listaGeral):
     """Função para alterar treinamentos já cadastrados (Permite alterar: matrícula, nome do curso, data de início, data de término e carga horária)."""
