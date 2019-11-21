@@ -434,7 +434,7 @@ def cadastroTreinamento(dic):
                         continuar10 = False
                         return listaGeral
 
-def altera(listaGeral):
+def altera(listaGeral,dic):
     """Função para alterar treinamentos já cadastrados (Permite alterar: matrícula, nome do curso, data de início, data de término e carga horária)."""
     continuar7 =  True
     while continuar7:
@@ -550,7 +550,7 @@ def altera(listaGeral):
                 else:
                     print("\nOpção Inválida\n") 
 
-def buscar(listaGeral):
+def buscar(listaGeral,dic):
     """Função para realizar buscas no programa."""
     continuar9 = True
     while continuar9:
@@ -590,7 +590,7 @@ def buscar(listaGeral):
                 print("Não Há Empregados que realizaram o curso procurado!!\n")
                 continuar9 = False
                        
-def elimina(listaGeral):
+def elimina(listaGeral,dic):
     """Função para excluir treinamentos já cadastrados."""
     continuar5 = True
     while continuar5:
