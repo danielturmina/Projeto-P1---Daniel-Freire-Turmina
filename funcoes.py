@@ -642,7 +642,6 @@ def ordenar(listaGeral):
                         cont += 1
                 menor +=1
             listaGeral = novaLista
-            cripto(dic)
             relatorioOrdenado(listaGeral)
             print("\nArquivo Ordenado com Sucesso! Arquivo RelatoriosOrdenado.csv foi Salvo!\n")
             listaLog21 = [login,dataTexto,"Ordenou o arquivo Elementos."]
