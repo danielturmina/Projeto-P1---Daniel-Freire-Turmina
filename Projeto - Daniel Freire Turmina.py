@@ -37,6 +37,7 @@ if acesso == "analista" or acesso == "estagiario" or acesso == "admin":
                 print("\nVocê não possui acesso para realizar cadastros!!\n")
         elif menu == "2":
             if acesso == "analista" or acesso == "admin":
+                dic = dicionario(listaGeral)
                 altera(listaGeral,dic)
             elif acesso == "estagiario":
                 print("\nVocê não possui acesso para realizar alterações!!\n")
